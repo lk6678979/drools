@@ -1,0 +1,38 @@
+////命名空间,和java的package一样，必须和这个文件的包路径保持一致
+//package com.lk.drools.helloworld
+//
+////类似于Java中的import语句，语句的工作方式类似于Java中的import语句。您需要为要在规则中使用的任何对象指定完全限定路径和类型名称
+//import com.lk.drools.HelloWorldExample.Message;
+//
+////用于定义全局变量
+////在代码中给全局变量赋值
+////List list = new ArrayList();
+////KieSession kieSession = kiebase.newKieSession();
+////kieSession.setGlobal( "list", list );
+//global java.util.List list
+//
+////规则名称
+//rule "Hello World"
+//    //dialect,默认值： 根据package指定,类型：String，"java" or "mvel"
+//    //dialect种类是用于LHS或RHS代码块中的任何代码表达式的语言。
+//    //目前有两种dialect，Java和MVEL。虽然dialect可以在包级别指定，但此属性允许为规则覆盖包定义。
+//    dialect "mvel"
+//    // 冒号前面的m是在规则结果中引用匹配对象的绑定变量，也就是传进规则引擎的对象
+//    when
+//        m : Message( status == Message.HELLO, message : message )
+//    then
+//        System.out.println( message );
+////        modify ( m ) { setMessage( "Goodbyte cruel world" ),
+////                       setStatus( Message.GOODBYE ) };
+//    //modify修改对象m的属性
+//    modify ( m ) { message = "Goodbye cruel world",
+//                   status = Message.GOODBYE };
+//end
+//
+//rule "Good Bye"
+//    dialect "java"
+//    when
+//        Message( status == Message.GOODBYE, message : message )
+//    then
+//        System.out.println( message );
+//end
