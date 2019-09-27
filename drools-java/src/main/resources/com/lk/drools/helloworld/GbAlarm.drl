@@ -1,0 +1,22 @@
+package com.lk.drools.helloworld
+
+import java.util.ArrayList
+import com.sziov.gacnev.qbalarm.entity.dto.GbSignDto
+import com.sziov.gacnev.qbalarm.entity.po.GbSignPo
+import com.sziov.gacnev.qbalarm.entity.po.AlarmPo
+
+global java.util.List list
+
+rule "1002"
+    dialect "mvel"
+    when
+        $gbSignDto : GbSignDto()
+        $alarmSign : ArrayList( size >= 3)
+                     from collect(GbSignPo($gbSignDto.getSignList().size() - $gbSignDto.getSignList().indexOf(this) <= 5 && INFO_TYPE_1_SIGNAL_1==2)
+                     from $gbSignDto.getSignList())
+    then
+        System.out.println( $alarmSign );
+        list.add(new AlarmPo("1212"));
+//    modify ( m ) { message = "Goodbye cruel world",
+//                   status = Message.GOODBYE };
+end

@@ -9,8 +9,6 @@
     <version>1.0.0</version>
     <modules>
         <module>drools-java</module>
-        <module>drools-java-class</module>
-        <module>drools-java-class</module>
     </modules>
     <packaging>pom</packaging>
 </project>

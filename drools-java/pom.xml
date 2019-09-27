@@ -11,6 +11,18 @@
 
     <artifactId>drools-java</artifactId>
     <description>java通过配置文件执行规则引擎</description>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>6</source>
+                    <target>6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <properties>
         <drools.version>7.18.0.Final</drools.version>
@@ -47,6 +59,11 @@
             <groupId>org.drools</groupId>
             <artifactId>drools-decisiontables</artifactId>
             <version>${drools.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.22</version>
         </dependency>
     </dependencies>
 </project>
