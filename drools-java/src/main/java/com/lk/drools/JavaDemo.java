@@ -12,7 +12,7 @@ import org.kie.internal.utils.KieHelper;
 import java.util.ArrayList;
 
 /**
- * JAVA代码生成规则字符串，加载到kie中
+ * 官方demo JAVA代码生成规则字符串，加载到kie中
  */
 public class JavaDemo {
 

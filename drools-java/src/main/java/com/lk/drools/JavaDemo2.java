@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * JAVA代码生成规则字符串，加载到kie中
+ * 生产demo：JAVA代码生成规则字符串，加载到kie中
  */
 public class JavaDemo2 {
 
