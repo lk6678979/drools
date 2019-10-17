@@ -40,8 +40,8 @@ public class JavaDemo4 {
                         "           from collect(Map($signList.size() - this._dataIndex <= 5  && this.INFO_TYPE_7_SIGNAL_13 == 0 )\n" +
                         "           from $signList)\n" +
                         "    then\n" +
-//                        "    $alarmKieDto.resultAlarm.add(new AlarmDto(alarmLevel, alarmFlag, alarmName, faultDescription, dealLevel, dealAdvise, ruleId, autoGenOrder, alarmJoinTime,isNeedAlram));\n" +
-                        "    $alarmKieDto.resultAlarm.add(new AlarmDto(\"报警等级\", \"6001\", \"报警名称\", \"故障描述\", \"处置等级\", \"处置建议\", \"规则ID\", \"是否自动生成工单\", 10,\"是否生成报警\"));\n" +
+//                        "    $alarmKieDto.resultAlarm.add(new AlarmDto(alarmFlag,ruleId));\n" +
+                        "    $alarmKieDto.resultAlarm.add(new AlarmDto( \"6001\", \"规则ID\"));\n" +
 //                        " AlarmDto alarmDto = new AlarmDto();\n" +
 //                        "        alarmDto.setAlarmFlag(\"6001\");//报警名称编号\n" +
 //                        "        alarmDto.setAlarmName(\"报警名称\");\n" +

@@ -325,16 +325,8 @@ public class AlarmDto implements Serializable {
 
     }
 
-    public AlarmDto(String alarmLevel, String alarmFlag, String alarmName, String faultDescription, String dealLevel, String dealAdvise, String ruleId, String autoGenOrder, Integer alarmJoinTime, String isNeedAlram) {
-        this.alarmLevel = alarmLevel;
+    public AlarmDto(String alarmFlag, String ruleId) {
         this.alarmFlag = alarmFlag;
-        this.alarmName = alarmName;
-        this.faultDescription = faultDescription;
-        this.dealLevel = dealLevel;
-        this.dealAdvise = dealAdvise;
         this.ruleId = ruleId;
-        this.autoGenOrder = autoGenOrder;
-        this.alarmJoinTime = alarmJoinTime;
-        this.isNeedAlram = isNeedAlram;
     }
 }
