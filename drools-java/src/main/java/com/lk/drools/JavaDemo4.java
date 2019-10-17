@@ -41,9 +41,9 @@ public class JavaDemo4 {
                         "           from $signList)\n" +
                         "    then\n" +
 //                        "    $alarmKieDto.resultAlarm.add(new AlarmDto(alarmLevel, alarmFlag, alarmName, faultDescription, dealLevel, dealAdvise, ruleId, autoGenOrder, alarmJoinTime,isNeedAlram));\n" +
-                        "    $alarmKieDto.resultAlarm.add(new AlarmDto(\"报警等级\", \"alarmSoc2Low\", \"报警名称\", \"故障描述\", \"处置等级\", \"处置建议\", \"规则ID\", \"是否自动生成工单\", 10,\"是否生成报警\"));\n" +
+                        "    $alarmKieDto.resultAlarm.add(new AlarmDto(\"报警等级\", \"6001\", \"报警名称\", \"故障描述\", \"处置等级\", \"处置建议\", \"规则ID\", \"是否自动生成工单\", 10,\"是否生成报警\"));\n" +
 //                        " AlarmDto alarmDto = new AlarmDto();\n" +
-//                        "        alarmDto.setAlarmFlag(\"alarmSoc2Low\");//报警名称编号（国标信号）\n" +
+//                        "        alarmDto.setAlarmFlag(\"6001\");//报警名称编号\n" +
 //                        "        alarmDto.setAlarmName(\"报警名称\");\n" +
 //                        "        alarmDto.setAlarmJoinTime(10);//合并报警时长\n" +
 //                        "        alarmDto.setAutoGenOrder(\"1\");//是否自动生成工单\n" +
