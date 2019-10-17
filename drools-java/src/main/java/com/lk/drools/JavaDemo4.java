@@ -37,10 +37,22 @@ public class JavaDemo4 {
                         "           if ($lastAlarmInfos.containsKey(\"16\") && $currGbInfo['uploadTime'] - $lastAlarmInfos['16'] <=10 " +
                         "           && $currGbInfo['INFO_TYPE_7_SIGNAL_13']==1)  do[stopAlarm]" +
                         "           $alarmSign : ArrayList( size >= 1) \n " +
-                        "           from collect(Map($signList.size() - this._dataIndex <= 1  && this.INFO_TYPE_7_SIGNAL_13 == 0 )\n" +
+                        "           from collect(Map($signList.size() - this._dataIndex <= 5  && this.INFO_TYPE_7_SIGNAL_13 == 0 )\n" +
                         "           from $signList)\n" +
                         "    then\n" +
-                        "           $alarmKieDto.resultAlarm.add(new AlarmDto(\"6008\"));\n" +
+//                        "    $alarmKieDto.resultAlarm.add(new AlarmDto(alarmLevel, alarmFlag, alarmName, faultDescription, dealLevel, dealAdvise, ruleId, autoGenOrder, alarmJoinTime,isNeedAlram));\n" +
+                        "    $alarmKieDto.resultAlarm.add(new AlarmDto(\"报警等级\", \"alarmSoc2Low\", \"报警名称\", \"故障描述\", \"处置等级\", \"处置建议\", \"规则ID\", \"是否自动生成工单\", 10,\"是否生成报警\"));\n" +
+//                        " AlarmDto alarmDto = new AlarmDto();\n" +
+//                        "        alarmDto.setAlarmFlag(\"alarmSoc2Low\");//报警名称编号（国标信号）\n" +
+//                        "        alarmDto.setAlarmName(\"报警名称\");\n" +
+//                        "        alarmDto.setAlarmJoinTime(10);//合并报警时长\n" +
+//                        "        alarmDto.setAutoGenOrder(\"1\");//是否自动生成工单\n" +
+//                        "        alarmDto.setDealAdvise(\"处置建议\");\n" +
+//                        "        alarmDto.setAlarmLevel(\"报警等级\");\n" +
+//                        "        alarmDto.setDealLevel(\"处置等级\");\n" +
+//                        "        alarmDto.setFaultDescription(\"故障描述\");"+
+//                        "        alarmDto.setRuleId(\"规则ID\");"+
+//                        "           $alarmKieDto.resultAlarm.add(alarmDto);\n" +
                         "    then[stopAlarm]\n" +
 //                        "           $alarmKieDto.resultAlarm.add(new AlarmDto(\"33333\"));\n" +
                         "end\n";
