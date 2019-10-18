@@ -41,7 +41,7 @@ public class JavaDemo4 {
                         "           from $signList)\n" +
                         "    then\n" +
 //                        "    $alarmKieDto.resultAlarm.add(new AlarmDto(alarmFlag,ruleId));\n" +
-                        "    $alarmKieDto.resultAlarm.add(new AlarmDto( \"6001\", \"规则ID\"));\n" +
+                        "    $alarmKieDto.resultAlarm.add(new AlarmDto( \"6001\", \"16\"));\n" +
 //                        " AlarmDto alarmDto = new AlarmDto();\n" +
 //                        "        alarmDto.setAlarmFlag(\"6001\");//报警名称编号\n" +
 //                        "        alarmDto.setAlarmName(\"报警名称\");\n" +
