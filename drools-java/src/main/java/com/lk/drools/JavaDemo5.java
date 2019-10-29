@@ -36,7 +36,7 @@ public class JavaDemo5 {
                         "    when\n" +
                         "           $alarmKieDto : AlarmKieDto($signList:signList,$lastAlarmInfos:lastAlarmInfos,$currGbInfo:currGbInfo)\n" +
                         "           $alarmSign : ArrayList( size >= 2) \n " +
-                        "           from collect(Map($signList.size() - this._dataIndex <= 5  && (StringUtils.isNoneBlank(String.valueOf(this['INFO_TYPE_7_SIGNAL_13']))) && (this.INFO_TYPE_7_SIGNAL_13 == 1) )\n" +
+                        "           from collect(Map($signList.size() - this._dataIndex <= 5  &&  (this['INFO_TYPE_7_SIGNAL_12'] =='') )\n" +
                         "           from $signList)\n" +
                         "    then\n" +
 //                        "    $alarmKieDto.resultAlarm.add(new AlarmDto("",ruleId));\n" +
@@ -77,7 +77,7 @@ public class JavaDemo5 {
         po8.put("INFO_TYPE_7_SIGNAL_13", "1");
         po8.put("_dataIndex", "7");
         Map<String, Object> po9 = new HashMap<String, Object>();
-        po9.put("INFO_TYPE_7_SIGNAL_12", "0");
+        po9.put("INFO_TYPE_7_SIGNAL_12", "");
         po9.put("_dataIndex", "8");
         Map<String, Object> po10 = new HashMap<String, Object>();
         po10.put("INFO_TYPE_7_SIGNAL_13", 1);
