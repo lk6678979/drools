@@ -36,7 +36,7 @@ public class JavaDemo5 {
                         "    when\n" +
                         "           $alarmKieDto : AlarmKieDto($signList:signList,$lastAlarmInfos:lastAlarmInfos,$currGbInfo:currGbInfo)\n" +
                         "           $alarmSign : ArrayList( size >= 2) \n " +
-                        "           from collect(Map($signList.size() - this._dataIndex <= 5  &&  (this['INFO_TYPE_7_SIGNAL_12'] =='') )\n" +
+                        "           from collect(Map($signList.size() - this._dataIndex <= 5  &&  (this['INFO_TYPE_7_SIGNAL_12'] <500 ) )\n" +
                         "           from $signList)\n" +
                         "    then\n" +
 //                        "    $alarmKieDto.resultAlarm.add(new AlarmDto("",ruleId));\n" +
@@ -53,7 +53,7 @@ public class JavaDemo5 {
 
         // 应用程序可以将事实插入会话(用来校验规则的数据)，同时会出发规则引擎
         Map<String, Object> po1 = new HashMap();
-        po1.put("INFO_TYPE_7_SIGNAL_13", "1");
+        po1.put("INFO_TYPE_7_SIGNAL_13", "0");
         po1.put("_dataIndex", "0");
         Map<String, Object> po2 = new HashMap<String, Object>();
         po2.put("INFO_TYPE_7_SIGNAL_13", "0");
@@ -77,7 +77,7 @@ public class JavaDemo5 {
         po8.put("INFO_TYPE_7_SIGNAL_13", "1");
         po8.put("_dataIndex", "7");
         Map<String, Object> po9 = new HashMap<String, Object>();
-        po9.put("INFO_TYPE_7_SIGNAL_12", "");
+        po9.put("INFO_TYPE_7_SIGNAL_12", null);
         po9.put("_dataIndex", "8");
         Map<String, Object> po10 = new HashMap<String, Object>();
         po10.put("INFO_TYPE_7_SIGNAL_13", 1);
