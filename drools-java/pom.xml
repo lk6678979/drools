@@ -25,7 +25,7 @@
     </build>
 
     <properties>
-        <drools.version>7.18.0.Final</drools.version>
+        <drools.version>7.69.0.Final</drools.version>
     </properties>
 
     <dependencies>
